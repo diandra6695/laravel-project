@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,9 +23,10 @@ Route::get('/info', function(){
     echo 'info';
 });
 
-Route::get('/register', function(){
-    echo '<h3 style="text-align: center;" >REGISTER</h3>';
-});
+// Route::get('/register', function(){
+//     echo '<h3 style="text-align: center;" >REGISTER</h3>';
+// });
 
 Route::get('/news/view', [NewsController::class, 'show']);
 Route::get('/news/create', [NewsController::class, 'create']);
+Route::get('/register', [RegisterController::class, 'index']);
